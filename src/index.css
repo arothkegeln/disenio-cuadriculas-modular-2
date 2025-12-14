@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-deep-black: #0a0a0a;
+  --color-neon-orange: #FF6B35;
+  --color-electric-blue: #2E5CFF;
+  --color-neon-purple: #D946EF;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E0E0E0;
+  --color-text-muted: #A3A3A3;
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-spin-slow: spin 10s linear infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -10px var(--color-neon-orange);
+    }
+
+    to {
+      box-shadow: 0 0 20px 5px var(--color-neon-orange);
+    }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-deep-black text-text-primary font-sans antialiased selection:bg-neon-orange/30 selection:text-neon-orange;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display tracking-wide font-bold;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/[0.03] border border-white/[0.05] hover:border-neon-orange/50 transition-colors duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-orange to-neon-purple;
+}
+
+.text-gradient-alt {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500;
+}

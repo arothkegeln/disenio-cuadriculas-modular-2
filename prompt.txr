@@ -1,0 +1,1111 @@
+# PROMPT PARA CREAR SITIO WEB ESTILO VENTURE CAPITAL / INCUBADORA WEB3
+
+Crea un sitio web corporativo premium para una firma de capital de riesgo e incubadora tecnológica. El sitio debe transmitir innovación, profesionalismo y tecnología de vanguardia con énfasis en animaciones fluidas y transiciones sofisticadas.
+
+## ESPECIFICACIONES DE DISEÑO
+
+### Estética Visual
+- **Tema**: Futurista, oscuro, tecnológico, premium
+- **Paleta de colores**: 
+  - Fondo: Negro profundo (#0a0a0a a #121212)
+  - Acento primario: Naranja/Coral brillante (#FF6B35) con gradientes
+  - Acentos secundarios: Azul eléctrico, púrpura neón
+  - Texto: Blanco (#FFFFFF) y grises claros (#E0E0E0)
+- **Efectos visuales clave**: 
+  - Videos de fondo con elementos 3D
+  - Glassmorphism en tarjetas
+  - Gradientes animados que cambian sutilmente
+  - Partículas flotantes luminosas (canvas/WebGL)
+  - Geometría abstracta decorativa
+  - Blur effects en fondos de secciones
+- **Tipografía**: 
+  - Headings: Sans-serif bold, tracking amplio
+  - Body: Sans-serif clean, múltiples weights (300-700)
+  - Números: Monospace o display font para métricas
+
+## ESTRUCTURA DEL SITIO
+
+### 1. HERO SECTION (Full viewport)
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO:**
+- Título principal: "CONSTRUYENDO EL FUTURO" o "IMPULSANDO LA INNOVACIÓN"
+- Subtítulo: "Transformando ideas visionarias en proyectos exitosos con capital inteligente y soporte integral"
+- CTA: "Aplicar Ahora" o "Comenzar"
+- Partners: 15-20 logos en carrusel infinito automático
+
+**TRANSICIONES Y ANIMACIONES:**
+- **Entrada (Page Load):**
+  - Logo fade-in desde arriba (0.6s, ease-out)
+  - Menú items fade-in escalonado (cada item +0.1s delay)
+  - Video background fade-in (1s)
+  - Título: Split text animation, cada palabra aparece desde abajo (0.8s, elastic ease)
+  - Subtítulo: Fade + slide up (1s, delay 0.5s)
+  - CTA: Scale from 0.8 to 1 + fade-in (0.6s, delay 1s)
+  - Partners carousel: Slide-in desde abajo (0.8s, delay 1.2s)
+
+- **Scroll Behavior:**
+  - Parallax en video background (scroll más lento que contenido)
+  - Título principal: Scale down y fade-out al hacer scroll
+  - Header: Se convierte en sticky con backdrop blur al scroll >100px
+
+- **Efectos Continuos:**
+  - Partículas flotantes en background (WebGL/Canvas)
+  - Gradiente animado que rota suavemente (CSS animation 10s)
+  - Partners carousel con velocidad constante (20s loop)
+
+- **Hover Effects:**
+  - CTA: Glow effect naranja + scale(1.05) + box-shadow expansion
+  - Menu items: Underline animation desde centro hacia afuera
+
+---
+
+### 2. HEADER/NAVEGACIÓN (Sticky)
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO:**
+- Nav Items: "Programas" | "Portfolio" | "Recursos" | "Equipo" | "Contacto"
+- Dropdown: "Nuestro Ecosistema" con 5-6 links a productos/servicios
+- CTA: "Aplicar" o "Comenzar"
+
+**TRANSICIONES:**
+- **Scroll Transform:**
+  - Estado inicial: Transparente, padding vertical amplio (py-8)
+  - Al scroll: backdrop-blur-lg, background rgba(10,10,10,0.8), padding reducido (py-4)
+  - Transición suave: all 0.3s ease-in-out
+
+- **Dropdown Animation:**
+  - Click: Despliega desde arriba con spring animation
+  - Cada item aparece escalonado (+0.05s delay)
+  - Background: Glassmorphism con border gradient
+  - Hover en items: Background glow + translate-x(4px)
+
+- **Mobile Menu:**
+  - Hamburger → X animation (rotate + morph)
+  - Menu slide desde derecha con overlay oscuro
+  - Items fade-in escalonado
+
+---
+
+### 3. SECCIÓN "VALOR DIFERENCIAL"
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO:**
+- Título: "Más Allá del Capital" o "Ecosistema Completo"
+- Subtítulo: "Soporte integral para startups tecnológicas"
+- Programa 1: "Incubación y Aceleración" con descripción breve
+- Programa 2: "Inversión y Capital" con descripción breve
+- Badges: "IA" | "Blockchain" | "DeFi" | "Infraestructura"
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Scroll Trigger (Intersection Observer):**
+  - Elemento 3D: Fade-in + rotate-in cuando entra en viewport
+  - Título: Slide-up + fade-in (threshold: 0.2)
+  - Cards: Stagger animation, cada una aparece +0.2s después
+
+- **Cards Animation:**
+  - Estado inicial: opacity: 0, translateY(40px), scale(0.95)
+  - Animación: 0.8s ease-out
+  - Final: opacity: 1, translateY(0), scale(1)
+
+- **Hover en Cards:**
+  - Transform: translateY(-8px) + scale(1.02)
+  - Box-shadow: 0 20px 60px rgba(255,107,53,0.3)
+  - Border: Gradient border animado (rotate)
+  - Transición: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+- **Badges:**
+  - Hover: Background pulse animation
+  - Click: Ripple effect desde punto de contacto
+
+- **Background Effects:**
+  - Gradient mesh animado rotando lentamente
+  - Blur circles flotando con keyframes (60s loop)
+
+---
+
+### 4. SECCIÓN "SERVICIOS" (Grid + Carrusel)
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO (10-12 servicios):**
+1. "Gestión de Fundraising"
+2. "Construcción de Tesorería"
+3. "Partnerships Estratégicos"
+4. "Gestión de Influencers"
+5. "Conexiones con Exchanges"
+6. "Estrategia de Token"
+7. "Marketing y GTM"
+8. "Diseño Web y Branding"
+9. "Estrategia de PR"
+10. "Estrategias Post-Lanzamiento"
+11. "Crecimiento en Redes"
+12. "Desarrollo Comunitario"
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Entrada (Scroll Trigger):**
+  - Grid completo: Fade-in con stagger (cada fila +0.15s)
+  - Video background: Parallax scroll (velocidad 0.5x)
+
+- **Carrusel Navigation:**
+  - Click flecha: Smooth slide horizontal con easing cubic-bezier(0.65, 0, 0.35, 1)
+  - Duración: 0.6s
+  - Items que salen: Fade-out + scale(0.9)
+  - Items que entran: Fade-in + scale(1) desde 0.9
+
+- **Hover en Items:**
+  - Ícono: rotate(12deg) + scale(1.1)
+  - Card background: Gradient shift animado
+  - Número: Color change con transition
+  - Elevación: translateY(-4px)
+
+- **Auto-rotate Carousel:**
+  - Cada 5s automático en desktop
+  - Pausa en hover
+  - Indicadores de progreso (dots animados)
+
+- **Mobile Touch:**
+  - Swipe horizontal con momentum
+  - Snap to closest item
+  - Rubber band effect en extremos
+
+---
+
+### 5. PORTFOLIO SECTION
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO:**
+- Badge tipos: "Incubación" | "Inversión" | "Aceleración"
+- Métricas genéricas:
+  - "$X.XM Fondos Recaudados"
+  - "XX% Crecimiento Social"
+  - "XXx ROI ATH"
+  - "XX Partnerships"
+- 12-20 proyectos en total
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Scroll Trigger:**
+  - Título: Slide-in desde izquierda
+  - "Ver Todos": Slide-in desde derecha
+  - Cards: Cascade fade-in (stagger 0.1s)
+
+- **Carrusel Automático:**
+  - Transición cada 4s
+  - Smooth slide con ease-in-out
+  - Infinite loop seamless
+
+- **Cards Hover:**
+  - Elevación: translateY(-12px)
+  - Shadow expansion: 0 25px 70px rgba(255,107,53,0.4)
+  - Badge: Slight rotation (2deg)
+  - Logo: Scale(1.1) + brightness(1.2)
+  - Métricas: Counter animation (números incrementan)
+  - Border: Animated gradient border
+  - Duración: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+- **Click en Card:**
+  - Ripple effect desde punto de click
+  - Scale pulse (1 → 0.98 → 1) antes de navegar
+
+- **Indicadores (Dots):**
+  - Activo: Scale(1.5) + glow effect
+  - Inactivo: opacity 0.4
+  - Hover: Scale(1.2)
+  - Transición: 0.3s ease
+
+- **Arrow Navigation:**
+  - Hover: translateX(±4px) + glow
+  - Click: Scale(0.9) feedback
+  - Disabled state: opacity 0.3
+
+---
+
+### 6. MEDIA/PRESS SECTION
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO:**
+- 8-12 logos de medios (genéricos)
+- Headlines ejemplo:
+  - "Plataforma revoluciona el ecosistema de inversión cripto"
+  - "Firma lanza programa de incubación con $XXM en capital"
+  - "Nuevo fondo apuesta por startups de blockchain"
+  - "Innovador modelo de aceleración destaca en industria"
+
+**TRANSICIONES:**
+
+- **Carrusel Animation:**
+  - Slide horizontal suave
+  - 2-3 items visibles según viewport
+  - Infinite loop
+
+- **Media Cards Hover:**
+  - Scale(1.05)
+  - Logo: Brightness(1.3) + saturate(1.2)
+  - Background: Gradient shift
+  - Border: Animated glow effect
+
+- **Click/Tap:**
+  - Card press effect: scale(0.98)
+  - Rápido spring back
+
+---
+
+### 7. TESTIMONIALS SECTION
+
+**ESTRUCTURA:**
+
+**CONTENIDO GENÉRICO (5-8 testimonios):**
+- Nombres genéricos: "Juan Pérez", "María García", "Alex Chen", etc.
+- Empresas: "Proyecto Alpha", "StartupX", "TechVenture", etc.
+- Testimonios modelo:
+  - "Trabajar con [Nombre] transformó completamente nuestra estrategia de go-to-market. Su red de contactos y expertise nos abrió puertas que jamás hubiéramos alcanzado solos."
+  - "El soporte no se limitó al capital. Recibimos mentoría continua, acceso a partners estratégicos y un equipo que realmente se involucra en el éxito del proyecto."
+
+**TRANSICIONES:**
+
+- **Carrusel Control:**
+  - Fade cross-dissolve entre testimonios (0.6s)
+  - Foto: Scale + opacity transition
+  - Texto: Fade out → Fade in con slight slide
+
+- **Auto-play:**
+  - Cambio cada 6-8s
+  - Progress bar en bottom (animación de fill)
+  - Pausa en hover
+
+- **Card Animation:**
+  - Entrada: Fade + slide from right
+  - Salida: Fade + slide to left
+  - Blur effect durante transición
+
+- **Hover:**
+  - LinkedIn icon: Scale(1.2) + color transition
+  - Slight glow en foto de perfil
+
+---
+
+### 8. TEAM SECTION
+
+**ESTRUCTURA:**
+
+# PROMPT PARA CREAR SITIO WEB ESTILO VENTURE CAPITAL / INCUBADORA WEB3
+
+Crea un sitio web corporativo premium para una firma de capital de riesgo e incubadora tecnológica. El sitio debe transmitir innovación, profesionalismo y tecnología de vanguardia con énfasis en animaciones fluidas y transiciones sofisticadas.
+
+## ESPECIFICACIONES DE DISEÑO
+
+### Estética Visual
+- **Tema**: Futurista, oscuro, tecnológico, premium
+- **Paleta de colores**: 
+  - Fondo: Negro profundo (#0a0a0a a #121212)
+  - Acento primario: Naranja/Coral brillante (#FF6B35) con gradientes
+  - Acentos secundarios: Azul eléctrico, púrpura neón
+  - Texto: Blanco (#FFFFFF) y grises claros (#E0E0E0)
+- **Efectos visuales clave**: 
+  - Videos de fondo con elementos 3D
+  - Glassmorphism en tarjetas
+  - Gradientes animados que cambian sutilmente
+  - Partículas flotantes luminosas (canvas/WebGL)
+  - Geometría abstracta decorativa
+  - Blur effects en fondos de secciones
+- **Tipografía**: 
+  - Headings: Sans-serif bold, tracking amplio
+  - Body: Sans-serif clean, múltiples weights (300-700)
+  - Números: Monospace o display font para métricas
+
+## ESTRUCTURA DEL SITIO
+
+### 1. HERO SECTION (Full viewport)
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│  Logo                    Menu Items      [CTA Button]│
+├─────────────────────────────────────────────────────┤
+│                                                      │
+│              [Video Background 3D]                   │
+│                                                      │
+│         TEXTO ANIMADO GRANDE                        │
+│         ROTATIVO O TYPEWRITER                       │
+│                                                      │
+│         Subtítulo descriptivo centrado              │
+│         de dos líneas máximo                        │
+│                                                      │
+│              [Botón CTA Principal]                   │
+│                                                      │
+│    ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐            │
+│    │Logo 1│ │Logo 2│ │Logo 3│ │Logo 4│ ← Carousel  │
+│    └──────┘ └──────┘ └──────┘ └──────┘   infinito  │
+│         [Texto: "Nuestros Partners"]                │
+│                                                      │
+│                    ↓ Scroll indicator               │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- Título principal: "CONSTRUYENDO EL FUTURO" o "IMPULSANDO LA INNOVACIÓN"
+- Subtítulo: "Transformando ideas visionarias en proyectos exitosos con capital inteligente y soporte integral"
+- CTA: "Aplicar Ahora" o "Comenzar"
+- Partners: 15-20 logos en carrusel infinito automático
+
+**TRANSICIONES Y ANIMACIONES:**
+- **Entrada (Page Load):**
+  - Logo fade-in desde arriba (0.6s, ease-out)
+  - Menú items fade-in escalonado (cada item +0.1s delay)
+  - Video background fade-in (1s)
+  - Título: Split text animation, cada palabra aparece desde abajo (0.8s, elastic ease)
+  - Subtítulo: Fade + slide up (1s, delay 0.5s)
+  - CTA: Scale from 0.8 to 1 + fade-in (0.6s, delay 1s)
+  - Partners carousel: Slide-in desde abajo (0.8s, delay 1.2s)
+
+- **Scroll Behavior:**
+  - Parallax en video background (scroll más lento que contenido)
+  - Título principal: Scale down y fade-out al hacer scroll
+  - Header: Se convierte en sticky con backdrop blur al scroll >100px
+
+- **Efectos Continuos:**
+  - Partículas flotantes en background (WebGL/Canvas)
+  - Gradiente animado que rota suavemente (CSS animation 10s)
+  - Partners carousel con velocidad constante (20s loop)
+
+- **Hover Effects:**
+  - CTA: Glow effect naranja + scale(1.05) + box-shadow expansion
+  - Menu items: Underline animation desde centro hacia afuera
+
+---
+
+### 2. HEADER/NAVEGACIÓN (Sticky)
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│ [Logo]  Nav1  Nav2  Nav3  Nav4  [Dropdown▼]  [CTA] │
+└─────────────────────────────────────────────────────┘
+        └─Dropdown Menu─────────────┐
+          │ → Link 1 (icon) →       │
+          │ → Link 2 (icon) →       │
+          │ → Link 3 (icon) →       │
+          │ → Sección actual (✓)    │
+          │ → Link 4 (icon) →       │
+          └─────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- Nav Items: "Programas" | "Portfolio" | "Recursos" | "Equipo" | "Contacto"
+- Dropdown: "Nuestro Ecosistema" con 5-6 links a productos/servicios
+- CTA: "Aplicar" o "Comenzar"
+
+**TRANSICIONES:**
+- **Scroll Transform:**
+  - Estado inicial: Transparente, padding vertical amplio (py-8)
+  - Al scroll: backdrop-blur-lg, background rgba(10,10,10,0.8), padding reducido (py-4)
+  - Transición suave: all 0.3s ease-in-out
+
+- **Dropdown Animation:**
+  - Click: Despliega desde arriba con spring animation
+  - Cada item aparece escalonado (+0.05s delay)
+  - Background: Glassmorphism con border gradient
+  - Hover en items: Background glow + translate-x(4px)
+
+- **Mobile Menu:**
+  - Hamburger → X animation (rotate + morph)
+  - Menu slide desde derecha con overlay oscuro
+  - Items fade-in escalonado
+
+---
+
+### 3. SECCIÓN "VALOR DIFERENCIAL"
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│              [Elemento 3D flotante]                  │
+│                                                      │
+│         TÍTULO DE SECCIÓN                           │
+│         Subtítulo descriptivo                        │
+│                                                      │
+│  ┌────────────────────┐  ┌────────────────────┐   │
+│  │  [Ícono grande]    │  │  [Ícono grande]    │   │
+│  │                    │  │                    │   │
+│  │  01               │  │  02               │   │
+│  │  Título Programa   │  │  Título Programa   │   │
+│  │  Descripción...    │  │  Descripción...    │   │
+│  │                    │  │                    │   │
+│  │  [Badge] [Badge]   │  │  [Link →]         │   │
+│  └────────────────────┘  └────────────────────┘   │
+│                                                      │
+│              [CTA: "Saber Más"]                     │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- Título: "Más Allá del Capital" o "Ecosistema Completo"
+- Subtítulo: "Soporte integral para startups tecnológicas"
+- Programa 1: "Incubación y Aceleración" con descripción breve
+- Programa 2: "Inversión y Capital" con descripción breve
+- Badges: "IA" | "Blockchain" | "DeFi" | "Infraestructura"
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Scroll Trigger (Intersection Observer):**
+  - Elemento 3D: Fade-in + rotate-in cuando entra en viewport
+  - Título: Slide-up + fade-in (threshold: 0.2)
+  - Cards: Stagger animation, cada una aparece +0.2s después
+
+- **Cards Animation:**
+  - Estado inicial: opacity: 0, translateY(40px), scale(0.95)
+  - Animación: 0.8s ease-out
+  - Final: opacity: 1, translateY(0), scale(1)
+
+- **Hover en Cards:**
+  - Transform: translateY(-8px) + scale(1.02)
+  - Box-shadow: 0 20px 60px rgba(255,107,53,0.3)
+  - Border: Gradient border animado (rotate)
+  - Transición: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+- **Badges:**
+  - Hover: Background pulse animation
+  - Click: Ripple effect desde punto de contacto
+
+- **Background Effects:**
+  - Gradient mesh animado rotando lentamente
+  - Blur circles flotando con keyframes (60s loop)
+
+---
+
+### 4. SECCIÓN "SERVICIOS" (Grid + Carrusel)
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│  TÍTULO: Soporte End-to-End                         │
+│  SUBTÍTULO: Del concepto al lanzamiento             │
+│                                                      │
+│  ← [Arrow]                              [Arrow] →   │
+│                                                      │
+│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐          │
+│  │ 01  │ │ 02  │ │ 03  │ │ 04  │ │ 05  │          │
+│  │[Ico]│ │[Ico]│ │[Ico]│ │[Ico]│ │[Ico]│          │
+│  │Texto│ │Texto│ │Texto│ │Texto│ │Texto│          │
+│  └─────┘ └─────┘ └─────┘ └─────┘ └─────┘          │
+│                                                      │
+│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐          │
+│  │ 06  │ │ 07  │ │ 08  │ │ 09  │ │ 10  │          │
+│  │[Ico]│ │[Ico]│ │[Ico]│ │[Ico]│ │[Ico]│          │
+│  │Texto│ │Texto│ │Texto│ │Texto│ │Texto│          │
+│  └─────┘ └─────┘ └─────┘ └─────┘ └─────┘          │
+│                                                      │
+│         [Video Background: Elementos 3D]            │
+│                                                      │
+│              [CTA: "Aplicar Ahora"]                 │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO (10-12 servicios):**
+1. "Gestión de Fundraising"
+2. "Construcción de Tesorería"
+3. "Partnerships Estratégicos"
+4. "Gestión de Influencers"
+5. "Conexiones con Exchanges"
+6. "Estrategia de Token"
+7. "Marketing y GTM"
+8. "Diseño Web y Branding"
+9. "Estrategia de PR"
+10. "Estrategias Post-Lanzamiento"
+11. "Crecimiento en Redes"
+12. "Desarrollo Comunitario"
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Entrada (Scroll Trigger):**
+  - Grid completo: Fade-in con stagger (cada fila +0.15s)
+  - Video background: Parallax scroll (velocidad 0.5x)
+
+- **Carrusel Navigation:**
+  - Click flecha: Smooth slide horizontal con easing cubic-bezier(0.65, 0, 0.35, 1)
+  - Duración: 0.6s
+  - Items que salen: Fade-out + scale(0.9)
+  - Items que entran: Fade-in + scale(1) desde 0.9
+
+- **Hover en Items:**
+  - Ícono: rotate(12deg) + scale(1.1)
+  - Card background: Gradient shift animado
+  - Número: Color change con transition
+  - Elevación: translateY(-4px)
+
+- **Auto-rotate Carousel:**
+  - Cada 5s automático en desktop
+  - Pausa en hover
+  - Indicadores de progreso (dots animados)
+
+- **Mobile Touch:**
+  - Swipe horizontal con momentum
+  - Snap to closest item
+  - Rubber band effect en extremos
+
+---
+
+### 5. PORTFOLIO SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│  NUESTRO PORTFOLIO                  [Ver Todos →]   │
+│                                                      │
+│  ← [Arrow]                              [Arrow] →   │
+│                                                      │
+│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐│
+│  │ [Badge:Tipo] │ │ [Badge:Tipo] │ │ [Badge:Tipo] ││
+│  │              │ │              │ │              ││
+│  │   [Logo]     │ │   [Logo]     │ │   [Logo]     ││
+│  │              │ │              │ │              ││
+│  │ $X.XM        │ │ $X.XM        │ │ $X.XM        ││
+│  │ Recaudado    │ │ Recaudado    │ │ Recaudado    ││
+│  │              │ │              │ │              ││
+│  │ XXX%         │ │ XX           │ │ XXx          ││
+│  │ Crecimiento  │ │ Partners     │ │ ROI          ││
+│  │              │ │              │ │              ││
+│  │ [Ver más →]  │ │ [Ver más →]  │ │ [Ver más →]  ││
+│  └──────────────┘ └──────────────┘ └──────────────┘│
+│                                                      │
+│            ● ○ ○ ○ ← Indicadores                   │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- Badge tipos: "Incubación" | "Inversión" | "Aceleración"
+- Métricas genéricas:
+  - "$X.XM Fondos Recaudados"
+  - "XX% Crecimiento Social"
+  - "XXx ROI ATH"
+  - "XX Partnerships"
+- 12-20 proyectos en total
+
+**TRANSICIONES Y ANIMACIONES:**
+
+- **Scroll Trigger:**
+  - Título: Slide-in desde izquierda
+  - "Ver Todos": Slide-in desde derecha
+  - Cards: Cascade fade-in (stagger 0.1s)
+
+- **Carrusel Automático:**
+  - Transición cada 4s
+  - Smooth slide con ease-in-out
+  - Infinite loop seamless
+
+- **Cards Hover:**
+  - Elevación: translateY(-12px)
+  - Shadow expansion: 0 25px 70px rgba(255,107,53,0.4)
+  - Badge: Slight rotation (2deg)
+  - Logo: Scale(1.1) + brightness(1.2)
+  - Métricas: Counter animation (números incrementan)
+  - Border: Animated gradient border
+  - Duración: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+- **Click en Card:**
+  - Ripple effect desde punto de click
+  - Scale pulse (1 → 0.98 → 1) antes de navegar
+
+- **Indicadores (Dots):**
+  - Activo: Scale(1.5) + glow effect
+  - Inactivo: opacity 0.4
+  - Hover: Scale(1.2)
+  - Transición: 0.3s ease
+
+- **Arrow Navigation:**
+  - Hover: translateX(±4px) + glow
+  - Click: Scale(0.9) feedback
+  - Disabled state: opacity 0.3
+
+---
+
+### 6. MEDIA/PRESS SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│              PRESENCIA EN MEDIOS                     │
+│                                                      │
+│  ← [Arrow]                              [Arrow] →   │
+│                                                      │
+│  ┌─────────────────┐  ┌─────────────────┐          │
+│  │  [Logo Medio 1] │  │  [Logo Medio 2] │          │
+│  │                 │  │                 │          │
+│  │  "Titular del   │  │  "Titular del   │          │
+│  │   artículo..."  │  │   artículo..."  │          │
+│  │                 │  │                 │          │
+│  │   [Leer más →]  │  │   [Leer más →]  │          │
+│  └─────────────────┘  └─────────────────┘          │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- 8-12 logos de medios (genéricos)
+- Headlines ejemplo:
+  - "Plataforma revoluciona el ecosistema de inversión cripto"
+  - "Firma lanza programa de incubación con $XXM en capital"
+  - "Nuevo fondo apuesta por startups de blockchain"
+  - "Innovador modelo de aceleración destaca en industria"
+
+**TRANSICIONES:**
+
+- **Carrusel Animation:**
+  - Slide horizontal suave
+  - 2-3 items visibles según viewport
+  - Infinite loop
+
+- **Media Cards Hover:**
+  - Scale(1.05)
+  - Logo: Brightness(1.3) + saturate(1.2)
+  - Background: Gradient shift
+  - Border: Animated glow effect
+
+- **Click/Tap:**
+  - Card press effect: scale(0.98)
+  - Rápido spring back
+
+---
+
+### 7. TESTIMONIALS SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│           LO QUE DICEN NUESTROS FUNDADORES           │
+│                                                      │
+│  ← [Arrow]                              [Arrow] →   │
+│                                                      │
+│  ┌───────────────────────────────────────────────┐ │
+│  │  ┌─────┐                                      │ │
+│  │  │Foto │  Nombre del Fundador                 │ │
+│  │  │     │  CEO/Founder de Proyecto X           │ │
+│  │  └─────┘                                      │ │
+│  │                                                │ │
+│  │  "Testimonio completo del fundador           │ │
+│  │   describiendo su experiencia trabajando      │ │
+│  │   con la incubadora. Varios párrafos          │ │
+│  │   destacando beneficios concretos..."         │ │
+│  │                                                │ │
+│  │                              [Ícono LinkedIn] │ │
+│  └───────────────────────────────────────────────┘ │
+│                                                      │
+│                 ● ● ○ ● ●                           │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO (5-8 testimonios):**
+- Nombres genéricos: "Juan Pérez", "María García", "Alex Chen", etc.
+- Empresas: "Proyecto Alpha", "StartupX", "TechVenture", etc.
+- Testimonios modelo:
+  - "Trabajar con [Nombre] transformó completamente nuestra estrategia de go-to-market. Su red de contactos y expertise nos abrió puertas que jamás hubiéramos alcanzado solos."
+  - "El soporte no se limitó al capital. Recibimos mentoría continua, acceso a partners estratégicos y un equipo que realmente se involucra en el éxito del proyecto."
+
+**TRANSICIONES:**
+
+- **Carrusel Control:**
+  - Fade cross-dissolve entre testimonios (0.6s)
+  - Foto: Scale + opacity transition
+  - Texto: Fade out → Fade in con slight slide
+
+- **Auto-play:**
+  - Cambio cada 6-8s
+  - Progress bar en bottom (animación de fill)
+  - Pausa en hover
+
+- **Card Animation:**
+  - Entrada: Fade + slide from right
+  - Salida: Fade + slide to left
+  - Blur effect durante transición
+
+- **Hover:**
+  - LinkedIn icon: Scale(1.2) + color transition
+  - Slight glow en foto de perfil
+
+---
+
+### 8. TEAM SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│        CONSTRUIDO POR EXPERTOS PARA FUNDADORES       │
+│                  NUESTRO EQUIPO                      │
+│                                                      │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
+│  │          │  │          │  │          │          │
+│  │  [Foto]  │  │  [Foto]  │  │  [Foto]  │          │
+│  │          │  │          │  │          │          │
+│  │  Nombre  │  │  Nombre  │  │  Nombre  │          │
+│  │  Cargo   │  │  Cargo   │  │  Cargo   │          │
+│  │          │  │          │  │          │          │
+│  │  [Bio ▼] │  │  [Bio ▼] │  │  [Bio ▼] │          │
+│  │          │  │          │  │          │          │
+│  │ [Social] │  │ [Social] │  │ [Social] │          │
+│  └──────────┘  └──────────┘  └──────────┘          │
+│                                                      │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
+│  │  [Más miembros del equipo...]               │  │
+│  └──────────┘  └──────────┘  └──────────┘          │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO (6-8 miembros):**
+- Cargos: "Director de Inversiones", "Head of Incubación", "Marketing Lead", "Chief Compliance Officer", "VC Relations Manager", "Tech Advisor"
+- Bios genéricas: "X años de experiencia en [industria]. Anteriormente [cargo] en [empresa]. Expert@ en [especialidad]."
+
+**TRANSICIONES:**
+
+- **Grid Entry:**
+  - Staggered fade-in (cada card +0.15s delay)
+  - Scale from 0.9 to 1
+
+- **Card Hover:**
+  - Foto: Slight zoom (scale 1.1) con smooth transition
+  - Overlay oscuro reduce opacity
+  - Border gradient aparece/rota
+  - Elevación: translateY(-8px)
+
+- **Bio Expand:**
+  - Click: Accordion expansion con smooth height animation
+  - Texto: Fade-in durante expansion
+  - Ícono: Rotate 180deg
+  - Duración: 0.4s ease-in-out
+
+- **Social Icons:**
+  - Hover: Scale(1.3) + color fill animation
+  - Click: Ripple effect
+
+---
+
+### 9. FAQ SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│              PREGUNTAS FRECUENTES                    │
+│           Encuentra respuestas rápidamente           │
+│                                                      │
+│  ┌─────────────────────────────────────────────┐   │
+│  │ ▼ ¿Pregunta número 1?                       │   │
+│  ├─────────────────────────────────────────────┤   │
+│  │   Respuesta detallada aquí con varios       │   │
+│  │   párrafos explicando el tema en detalle... │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                      │
+│  ┌─────────────────────────────────────────────┐   │
+│  │ ▶ ¿Pregunta número 2?                       │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                      │
+│  ┌─────────────────────────────────────────────┐   │
+│  │ ▶ ¿Pregunta número 3?                       │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                      │
+│  [6-8 preguntas más...]                             │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO (8-10 FAQs):**
+1. "¿Qué es el programa de incubación?"
+2. "¿Cuáles son los requisitos para aplicar?"
+3. "¿En qué verticales invierten?"
+4. "¿Cuál es el ticket promedio de inversión?"
+5. "¿Cuánto dura el programa?"
+6. "¿Qué tipo de soporte ofrecen?"
+7. "¿Cómo se diferencia de otras incubadoras?"
+8. "¿Cuál es el proceso de selección?"
+
+**TRANSICIONES:**
+
+- **Accordion Animation:**
+  - Click en pregunta:
+    - Ícono: Rotate 90deg (▶ a ▼) con 0.3s ease
+    - Respuesta: Height auto-expansion con 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+    - Fade-in de contenido (opacity 0 → 1) con 0.3s delay
+  
+- **Hover States:**
+  - Pregunta: Background color subtle shift
+  - Border: Left border glow effect
+  - Cursor: pointer
+
+- **Scroll Trigger:**
+  - Items fade-in con stagger (0.1s entre cada)
+  - Slide from left animation
+
+- **Active State:**
+  - Pregunta abierta: Background highlighted
+  - Border: Animated gradient
+
+---
+
+### 10. BLOG/NEWS SECTION
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                      │
+│  ÚLTIMAS NOTICIAS              [Ver Blog Completo →]│
+│                                                      │
+│  ← [Arrow]                              [Arrow] →   │
+│                                                      │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
+│  │ [Imagen] │  │ [Imagen] │  │ [Imagen] │          │
+│  │          │  │          │  │          │          │
+│  │ Título   │  │ Título   │  │ Título   │          │
+│  │ artículo │  │ artículo │  │ artículo │          │
+│  │          │  │          │  │          │          │
+│  │ [Avatar] │  │ [Avatar] │  │ [Avatar] │          │
+│  │ Autor    │  │ Autor    │  │ Autor    │          │
+│  │          │  │          │  │          │          │
+│  │ [Badge]  │  │ [Badge]  │  │ [Badge]  │          │
+│  │ Categoría│  │ Categoría│  │ Categoría│          │
+│  │          │  │          │  │          │          │
+│  │ Fecha    │  │ Fecha    │  │ Fecha    │          │
+│  │          │  │          │  │          │          │
+│  │[Leer→]   │  │[Leer→]   │  │[Leer→]   │          │
+│  └──────────┘  └──────────┘  └──────────┘          │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+```
+
+**CONTENIDO GENÉRICO:**
+- Categorías: "Anuncios" | "Guías" | "Análisis" | "Casos de Éxito"
+- Títulos ejemplo:
+  - "Cómo construir un pitch deck que levanta capital"
+  - "5 errores comunes en fundraising Web3"
+  - "El futuro de la inversión en blockchain"
+  - "Case Study: De idea a $10M en 12 meses"
+- Autores genéricos
+- Fechas relativas: "Hace 2 días", "1 semana", etc.
+
+**TRANSICIONES:**
+
+- **Grid/Carrusel Entry:**
+  - Cards: Staggered fade + slide up (0.1s delay cada)
+  - Imágenes: Lazy load con blur-to-sharp transition
+
+- **Card Hover:**
+  - Imagen: Scale(1.1) con overflow hidden en container
+  - Overlay oscuro: Opacity 0 → 0.3
+  - Card: translateY(-8px) + shadow expansion
+  - Título: Color shift al acento
+  - "Leer →": translateX(4px)
+  - Duración: 0.4s ease-out
+
+- **Click/Navigation:**
+  - Ripple effect en card
+  - Page transition con fade
+
+- **Carrusel:**
+  - Smooth horizontal scroll
+  - Snap to card alignment
+  - Momentum scrolling en mobile
+
+---
+
+### 11. FOOTER
+
+**ESTRUCTURA:**
+```
+┌─────────────────────────────────────────────────────┐
+│  ┌──────────────────────────────────────────────┐  │
+│  │ MANTENTE ACTUALIZADO                         │  │
+│  │                                               │  │
+│  │ [Email Input]           [Suscribirse]        │  │
+│  │ *Solo contenido valioso                      │  │
+│  └──────────────────────────────────────────────┘  │
+│                                                      │
+│  ┌─────────────┬─────────────┬─────────────┐       │
+│  │ PRODUCTOS   │ LINKS       │ LEGAL       │       │
+│  │             │             │             │       │
+│  │ • Link 1    │ • Inicio    │ • Privacidad│       │
+│  │ • Link 2    │ • Aplicar   │ • Cookies   │       │
+│  │ • Link 3    │ • Blog      │ • Términos  │       │
+│  │ • Link 4    │ • Ayuda     │             │       │
+│  └─────────────┴─────────────┴─────────────┘       │
+│                                                      │
+│  [Icon] [Icon] [Icon] [Icon]  ← Redes sociales     │
+│  TWITTER TELEGRAM LINKEDIN MEDIUM                   │
+│                                                      │
+│  © 2025 Todos los derechos reservados              │
+└─────────────────────────────────────────────────────┘
+```
+
+**TRANSICIONES:**
+
+- **Newsletter Form:**
+  - Input focus: Border glow animation + width expansion
+  - Submit hover: Background gradient shift + scale(1.05)
+  - Success: Check mark animation + green flash
+  - Error: Shake animation + red border pulse
+
+- **Links Hover:**
+  - Underline slide from left to right
+  - Color transition al acento
+  - Duration: 0.2s ease
+
+- **Social Icons:**
+  - Hover: 
+    - Rotate(-5deg) + scale(1.2)
+    - Background circle appears con fade
+    - Color fill animation
+  - Click: Scale pulse (1 → 0.9 → 1.1 → 1)
+
+- **Footer Reveal:**
+  - Scroll trigger: Fade-in from bottom
+  - Background: Subtle gradient animation
+
+---
+
+## TRANSICIONES GLOBALES DEL SITIO
+
+### Page Load Sequence
+```
+1. (0.0s) Background fade-in
+2. (0.2s) Header aparecer desde arriba
+3. (0.4s) Hero content cascade
+4. (0.8s) Parallax activation
+5. (1.0s) Partículas start floating
+6. (1.2s) Todo interactivo
+```
+
+### Scroll Animations Framework
+```javascript
+// Comportamiento general al scroll
+- Parallax backgrounds: velocidad 0.5x
+- Section reveals: Intersection Observer threshold 0.15
+- Stagger delays: 0.05-0.15s entre elementos
+- Default easing: cubic-bezier(0.4, 0, 0.2, 1)
+```
+
+### Page Transitions
+```
+- Route change: Fade-out actual (0.3s) → Fade-in nueva (0.4s)
+- Overlay oscuro durante transición
+- Scroll position reset
+```
+
+### Loading States
+```
+- Skeleton screens para contenido dinámico
+- Shimmer effect en placeholders
+- Spinner con glow para acciones
+```
+
+## EFECTOS DE FONDO CONTINUOS
+
+### Particle System
+```
+- Canvas/WebGL con 100-200 partículas
+- Movimiento: Perlin noise
+- Opacidad: 0.1-0.4 variable
+- Tamaño: 1-4px
+- Color: Blanco con tint del acento
+- Performance: RequestAnimationFrame, 60fps
+```
+
+### Gradient Mesh
+```
+- 3-4 blobs de color con blur
+- Rotación lenta: 60-120s por ciclo
+- Mix-blend-mode: screen
+- Opacidad: 0.15-0.25
+```
+
+### Video Backgrounds
+```
+- Formato: MP4, WebM, HEVC
+- Autoplay muted loop
+- Overlay oscuro: rgba(0,0,0,0.6)
+- Parallax scrolling
+- Pausa cuando fuera de viewport (performance)
+```
+
+## RESPONSIVE BREAKPOINTS
+```css
+/* Mobile First */
+- xs: 0-639px     (1 columna)
+- sm: 640-767px   (1-2 columnas)
+- md: 768-1023px  (2-3 columnas)
+- lg: 1024-1279px (3-4 columnas)
+- xl: 1280-1535px (4 columnas)
+- 2xl: 1536px+    (4 columnas + spacing)
+```
+
+### Mobile Adaptations
+```
+- Header: Hamburger menu
+- Hero: Título más pequeño, stack vertical
+- Carruseles: Swipe nativo, 1 item visible
+- Videos: Poster image estático
+- Partículas: Reducidas a 50
+- Animaciones: Simplificadas
+- Hover effects: Convertidos a active states
+```
+
+## PERFORMANCE OPTIMIZATIONS
+```
+✓ Lazy loading: Imágenes, videos, iframes
+✓ Code splitting: Por ruta
+✓ Debounce scroll events: 16ms
+✓ IntersectionObserver: Para trigger animations
+✓ Preload: Critical fonts, hero image
+✓ Minify: CSS, JS
+✓ Compress: Gzip/Brotli
+✓ CDN: Assets estáticos
+✓ Image optimization: WebP con fallback
+✓ Reduce motion: Para usuarios con preferencia
+```
+
+## ACCESSIBILITY
+```
+✓ Semantic HTML5
+✓ ARIA labels en elementos interactivos
+✓ Keyboard navigation completa
+✓ Focus indicators visibles
+✓ Alt text en todas las imágenes
+✓ Color contrast: WCAG AA mínimo
+✓ Skip to content link
+✓ Screen reader friendly
+```
+
+## TECNOLOGÍAS RECOMENDADAS
+```
+Frontend Framework: Next.js 14+ / React 18+
+Styling: Tailwind CSS + CSS Modules
+Animations: 
+  - Framer Motion (components)
+  - GSAP (complex timelines)
+  - Lottie (iconos animados)
+3D/Canvas: Three.js / react-three-fiber
+Carousels: Swiper.js / Embla
+Forms: React Hook Form + Zod
+State: Zustand / Jotai (si necesario)
+Analytics: Vercel Analytics / Posthog
+Deployment: Vercel / Netlify
+```
+
+## NOTAS FINALES
+
+- **Priorizar fluidez**: Todas las animaciones deben correr a 60fps
+- **Mobile-first**: Diseñar primero para móvil, expandir a desktop
+- **Progresive enhancement**: Sitio funcional sin JS, mejorado con JS
+- **Performance budget**: <3s LCP, <100ms FID, <0.1 CLS
+- **Testing**: Cross-browser (Chrome, Firefox, Safari, Edge)
+- **Consistent timing**: Usar variables para durations (--duration-fast: 0.2s, --duration-normal: 0.4s, --duration-slow: 0.6s)
