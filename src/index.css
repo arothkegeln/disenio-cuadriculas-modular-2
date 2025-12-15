@@ -1,14 +1,56 @@
 @import "tailwindcss";
 
-@theme {
-  /* Colors */
-  --color-deep-black: #0a0a0a;
-  --color-neon-orange: #FF6B35;
-  --color-electric-blue: #2E5CFF;
-  --color-neon-purple: #D946EF;
+/* 
+  THEME DEFINITIONS
+  Root holds the default values (Zenply Dark).
+  .theme-light overrides these for the Light Mode.
+*/
+:root {
+  /* ZENPLY DARK (Default) */
+  --color-bg-base: #0F0B15;
+  /* Deep Organic Dark */
+  --color-brand-primary: #5b21b6;
+  /* Deep Purple */
+  --color-brand-secondary: #76B947;
+  /* Bamboo Green */
+  --color-brand-accent: #76B947;
+  /* Green Accent */
+
+  /* Text Colors (Dark Mode) */
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #E0E0E0;
   --color-text-muted: #A3A3A3;
+}
+
+:root.theme-light {
+  /* ZENPLY LIGHT */
+  --color-bg-base: #e5e7eb;
+  /* Light Gray */
+  /* Keep Brand Colors same or adjust slightly for contrast if needed */
+  --color-brand-primary: #5b21b6;
+  /* Deep Purple */
+  --color-brand-secondary: #76B947;
+  /* Bamboo Green */
+  --color-brand-accent: #76B947;
+  /* Green Accent */
+
+  /* Text Colors (Light Mode) */
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #404040;
+  --color-text-muted: #737373;
+}
+
+@theme {
+  /* Map Tailwind Utility Names to Dynamic CSS Variables */
+  --color-deep-black: var(--color-bg-base);
+  --color-neon-orange: var(--color-brand-primary);
+  --color-electric-blue: var(--color-brand-secondary);
+  --color-neon-purple: var(--color-brand-accent);
+
+  /* Map Text Colors to Variables */
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
 
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
@@ -45,11 +87,18 @@
 
 :root {
   color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+/* Force light color scheme for Light theme */
+:root.theme-light {
+  color-scheme: light;
 }
 
 body {
   @apply bg-deep-black text-text-primary font-sans antialiased selection:bg-neon-orange/30 selection:text-neon-orange;
   overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1,
@@ -66,8 +115,22 @@ h6 {
   @apply backdrop-blur-xl bg-white/5 border border-white/10;
 }
 
+/* Update Glass Card for Light Mode compatibility */
 .glass-card {
-  @apply backdrop-blur-md bg-white/[0.03] border border-white/[0.05] hover:border-neon-orange/50 transition-colors duration-300;
+  @apply backdrop-blur-md transition-colors duration-300;
+  background-color: rgb(255 255 255 / 0.03);
+  /* Default Dark */
+  border: 1px solid rgb(255 255 255 / 0.05);
+}
+
+:root.theme-light .glass-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card:hover {
+  @apply border-neon-orange/50;
 }
 
 .text-gradient {
@@ -76,4 +139,8 @@ h6 {
 
 .text-gradient-alt {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500;
+}
+
+:root.theme-light .text-gradient-alt {
+  @apply to-gray-800 from-gray-500;
 }

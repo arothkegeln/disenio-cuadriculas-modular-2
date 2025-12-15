@@ -1,26 +1,31 @@
 import { motion } from 'framer-motion';
 import { Layers, Zap } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const programs = [
-    {
-        step: "01",
-        title: "Incubation",
-        description: "From whitepaper to mainnet. We provide hands-on engineering, tokenomics, and legal structuring support.",
-        icon: Layers,
-        badge: "Early Stage"
-    },
-    {
-        step: "02",
-        title: "Acceleration",
-        description: "Scale your user base and liquidity. Marketing strategies, exchange listings, and market making.",
-        icon: Zap,
-        badge: "Growth"
-    }
-];
+
 
 export default function ValueProp() {
+    const { t } = useLanguage();
+
+    const programs = [
+        {
+            step: t('value_prop.steps.incubation.step'),
+            title: t('value_prop.steps.incubation.title'),
+            description: t('value_prop.steps.incubation.desc'),
+            icon: Layers,
+            badge: t('value_prop.steps.incubation.badge')
+        },
+        {
+            step: t('value_prop.steps.acceleration.step'),
+            title: t('value_prop.steps.acceleration.title'),
+            description: t('value_prop.steps.acceleration.desc'),
+            icon: Zap,
+            badge: t('value_prop.steps.acceleration.badge')
+        }
+    ];
+
     return (
-        <section className="py-24 px-4 md:px-6 relative">
+        <section id="programs" className="py-24 px-4 md:px-6 relative">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
 
                 {/* Left: Content */}
@@ -31,7 +36,7 @@ export default function ValueProp() {
                         viewport={{ once: true }}
                         className="text-neon-orange font-mono text-sm tracking-widest mb-4 block"
                     >
-                // FULL STACK SUPPORT
+                        {t('value_prop.label')}
                     </motion.span>
 
                     <motion.h2
@@ -40,14 +45,14 @@ export default function ValueProp() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold mb-8"
                     >
-                        Beyond Capital. <br />
-                        <span className="text-text-muted">An Ecosystem.</span>
+                        {t('value_prop.title_prefix')} <br />
+                        <span className="text-text-muted">{t('value_prop.title_suffix')}</span>
                     </motion.h2>
 
                     <div className="space-y-6">
                         {programs.map((item, index) => (
                             <motion.div
-                                key={item.step}
+                                key={index}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

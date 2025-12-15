@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Nova Ventures / Zenply - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, futuristic landing page built with React, Vite, and Tailwind CSS v4. Designed for Venture Capital firms, Web3 Incubators, or High-Tech Consultancies.
 
-Currently, two official plugins are available:
+## 🎨 Theme Switcher
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project supports two distinct visual themes. The source code allows you to toggle between them without changing the component logic, effectively "white-labeling" the structure.
 
-## React Compiler
+### Available Themes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Nova** (Default):
+    *   **Aesthetic**: Dark, Cyberpunk, High-Tech.
+    *   **Colors**: Deep Black Background, Neon Orange Primary, Electric Blue Secondary.
+    *   **Vibe**: Aggressive, Innovative, Web3.
 
-## Expanding the ESLint configuration
+2.  **Zenply**:
+    *   **Aesthetic**: Organic, Calm, Professional.
+    *   **Colors**: Deep Organic Dark Background, Deep Purple Primary, Bamboo Green Secondary.
+    *   **Vibe**: Strategic, Reliable, Growth-Oriented.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### How to Switch Themes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  Open `src/config/theme.ts`.
+2.  Change the `active` property to either `'nova'` or `'zenply'`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```typescript
+// src/config/theme.ts
+export const themeConfig = {
+  active: 'zenply', // <--- Change this value
+};
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.  Save the file. The site will check this config on load and apply the correct CSS variables globally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠 Tech Stack
+
+*   **Framework**: React 18 + TypeScript + Vite
+*   **Styling**: Tailwind CSS v4 (using the new CSS-first `@theme` configuration)
+*   **Animations**: Framer Motion (complex scroll triggers, layout animations)
+*   **Icons**: Lucide React
+
+## 🚀 Getting Started
+
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+2.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+*   `src/components/`: Reusable UI sections (Hero, Services, Portfolio, etc.).
+*   `src/config/`: Configuration files (Theme settings).
+*   `src/index.css`: Global styles and Theme variable definitions.
+
+## ✨ Key Features
+
+*   **Dynamic Theming**: CSS Variable abstraction for easy rebranding.
+*   **Performance**: Optimized animations using hardware-accelerated transforms.
+*   **Responsive**: Mobile-first design architecture.
+*   **Interactive**: Infinite marquees, hover effects, and parallax backgrounds.

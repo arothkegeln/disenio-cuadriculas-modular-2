@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Cpu } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const partners = ["StellarFund", "NebulaVentures", "CosmosLabs", "OrionCapital", "PulsarVC", "QuasarInc", "VortexTech", "NovaChain"];
 
 export default function Hero() {
+    const { t } = useLanguage();
     return (
         <section className="relative min-h-screen flex flex-col justify-center items-center px-4 md:px-6 overflow-hidden pt-20">
 
@@ -26,7 +28,7 @@ export default function Hero() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-orange opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-orange"></span>
                     </span>
-                    Batch 2026 Open
+                    {t('hero.batch')}
                 </motion.div>
 
                 <motion.h1
@@ -35,8 +37,8 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8"
                 >
-                    BUILDING THE <br />
-                    <span className="text-gradient">FUTURE</span>
+                    {t('hero.title_prefix')} <br />
+                    <span className="text-gradient">{t('hero.title_suffix')}</span>
                 </motion.h1>
 
                 <motion.p
@@ -45,8 +47,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="text-lg md:text-2xl text-text-muted max-w-3xl mx-auto mb-12 leading-relaxed"
                 >
-                    Transforming visionary ideas into successful protocols with intelligent capital and
-                    comprehensive incubation support.
+                    {t('hero.description')}
                 </motion.p>
 
                 <motion.div
@@ -56,10 +57,10 @@ export default function Hero() {
                     className="flex flex-col sm:flex-row gap-4"
                 >
                     <button className="px-8 py-4 bg-neon-orange text-white font-bold text-lg rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_-10px_#FF6B35]">
-                        Apply for Funding
+                        {t('hero.cta_primary')}
                     </button>
-                    <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/20 transition-all">
-                        Explore Portfolio
+                    <button className="px-8 py-4 bg-white/5 border border-text-primary/10 text-text-primary font-bold text-lg rounded-full hover:bg-white/10 hover:border-neon-orange transition-all">
+                        {t('hero.cta_secondary')}
                     </button>
                 </motion.div>
             </div>
@@ -73,7 +74,7 @@ export default function Hero() {
             >
                 <div className="flex gap-12 animate-[scroll_20s_linear_infinite] min-w-full px-12 items-center">
                     {[...partners, ...partners, ...partners].map((partner, i) => (
-                        <div key={i} className="flex items-center gap-2 text-text-muted/50 font-display font-bold text-xl uppercase whitespace-nowrap">
+                        <div key={i} className="flex items-center gap-2 text-text-muted font-display font-bold text-xl uppercase whitespace-nowrap">
                             <Cpu size={20} /> {partner}
                         </div>
                     ))}

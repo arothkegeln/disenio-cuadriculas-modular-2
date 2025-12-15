@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const faqs = [
-    { q: "What is your typical check size?", a: "We typically invest between $500k to $2M in Seed rounds, with follow-on capital availability." },
-    { q: "Do you only invest in Web3?", a: "Yes, our mandate is strictly focused on decentralized technologies, infrastructure, and gaming." },
-    { q: "How long is the incubation program?", a: "The program runs for 12 weeks, but our support continues indefinitely through our portfolio network." },
-    { q: "Can I apply without a pitch deck?", a: "We recommend having at least a pitch deck or a whitepaper. For incubation, ideas are welcome if the team is strong." },
-];
+
 
 export default function FAQ() {
+    const { t } = useLanguage();
     const [open, setOpen] = useState<number | null>(0);
+
+    const faqs = [
+        { q: t('faq.items.q1.q'), a: t('faq.items.q1.a') },
+        { q: t('faq.items.q2.q'), a: t('faq.items.q2.a') },
+        { q: t('faq.items.q3.q'), a: t('faq.items.q3.a') },
+        { q: t('faq.items.q4.q'), a: t('faq.items.q4.a') },
+    ];
 
     return (
         <section className="py-24 px-4 md:px-6 bg-white/[0.02]">
             <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">Questions?</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">{t('faq.title')}</h2>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (

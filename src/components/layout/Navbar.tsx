@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Rocket } from 'lucide-react';
+import { Menu, X, ChevronDown, Moon, Sun, Globe } from 'lucide-react';
 import { cn } from '../../lib/utils';
-
-const navItems = [
-    { name: 'Programas', href: '#' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'Recursos', href: '#' },
-    { name: 'Equipo', href: '#' },
-    { name: 'Contacto', href: '#' },
-];
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme();
+    const { language, setLanguage, t } = useLanguage();
+
+    const navItems = [
+        { name: t('nav.programs'), href: '#programs' },
+        { name: t('nav.portfolio'), href: '#portfolio' },
+        { name: t('nav.resources'), href: '#blog' },
+        { name: t('nav.team'), href: '#team' },
+        { name: t('nav.contact'), href: '#footer' },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,12 +42,10 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
 
                 {/* Logo */}
-                <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter cursor-pointer group">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-orange to-neon-purple flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                        <Rocket className="text-white w-5 h-5 fill-current" />
-                    </div>
-                    <span>NOVA<span className="text-neon-orange">VENTURES</span></span>
-                </div>
+                <a href="/" className="flex items-center gap-2 cursor-pointer group">
+                    {/* Replace with Image Logo */}
+                    <img src="/logo-full.png" alt="Company Logo" className="h-10 w-auto object-contain" />
+                </a>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
@@ -59,11 +61,26 @@ export default function Navbar() {
                     ))}
 
                     <div className="flex items-center gap-1 text-sm font-medium text-text-secondary hover:text-white cursor-pointer transition-colors">
-                        Ecosistema <ChevronDown size={14} />
+                        {t('nav.ecosystem')} <ChevronDown size={14} />
+                    </div>
+
+                    {/* Toggles */}
+                    <div className="flex items-center gap-4 border-l border-white/10 pl-6">
+                        <button onClick={toggleTheme} className="text-text-secondary hover:text-text-primary transition-colors">
+                            {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
+
+                        <button
+                            onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+                            className="text-text-secondary hover:text-text-primary transition-colors font-mono text-xs flex items-center gap-1"
+                        >
+                            <Globe size={16} />
+                            {language.toUpperCase()}
+                        </button>
                     </div>
 
                     <button className="px-6 py-2.5 bg-white text-deep-black font-bold text-sm rounded-full hover:bg-neon-orange hover:text-white transition-all duration-300 shadow-[0_0_15px_-5px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_-5px_#FF6B35]">
-                        Aplicar
+                        {t('nav.apply')}
                     </button>
                 </div>
 
@@ -98,6 +115,14 @@ export default function Navbar() {
                                 {item.name}
                             </motion.a>
                         ))}
+                        <div className="flex gap-6 mt-8">
+                            <button onClick={toggleTheme} className="flex items-center gap-2 text-text-primary border border-white/10 px-4 py-2 rounded-lg">
+                                {theme === 'light' ? <Sun /> : <Moon />} {theme === 'light' ? 'Light Mode' : 'Dark Mode'}
+                            </button>
+                            <button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="flex items-center gap-2 text-text-primary border border-white/10 px-4 py-2 rounded-lg">
+                                <Globe /> {language === 'en' ? 'Spanish' : 'English'}
+                            </button>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

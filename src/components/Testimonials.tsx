@@ -1,34 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const testimonials = [
-    {
-        quote: "Their ecosystem support was the catalyst we needed to go from zero to $50M TVL in 3 months.",
-        author: "Alex Rivera",
-        role: "Founder, DeFi Protocol"
-    },
-    {
-        quote: "More than investors, they are true builders who understand the complexities of Web3 infrastructure.",
-        author: "Sarah Chen",
-        role: "CEO, ChainScale"
-    },
-    {
-        quote: "The incubation program provided us with the exact legal and tokenomic framework to launch confidently.",
-        author: "Marcus Johnson",
-        role: "Co-Founder, MetaVerse One"
-    }
-];
+
 
 export default function Testimonials() {
+    const { t } = useLanguage();
     const [active, setActive] = useState(0);
+
+    const testimonials = [
+        {
+            quote: t('testimonials.items.t1.quote'),
+            author: t('testimonials.items.t1.author'),
+            role: t('testimonials.items.t1.role')
+        },
+        {
+            quote: t('testimonials.items.t2.quote'),
+            author: t('testimonials.items.t2.author'),
+            role: t('testimonials.items.t2.role')
+        },
+        {
+            quote: t('testimonials.items.t3.quote'),
+            author: t('testimonials.items.t3.author'),
+            role: t('testimonials.items.t3.role')
+        }
+    ];
 
     useEffect(() => {
         const timer = setInterval(() => {
             setActive((prev) => (prev + 1) % testimonials.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+    }, [testimonials.length]);
 
     return (
         <section className="py-32 px-4 md:px-6 relative overflow-hidden">
@@ -56,7 +60,7 @@ export default function Testimonials() {
                                 "{testimonials[active].quote}"
                             </blockquote>
                             <div className="flex flex-col items-center gap-2">
-                                <cite className="not-italic font-bold text-lg text-white">{testimonials[active].author}</cite>
+                                <cite className="not-italic font-bold text-lg text-text-primary">{testimonials[active].author}</cite>
                                 <span className="text-text-muted text-sm uppercase tracking-wider">{testimonials[active].role}</span>
                             </div>
                         </motion.div>
